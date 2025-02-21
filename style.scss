@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('bg.jpg');
+    background-image: url('images/bg.jpg');
 
     nav {
         display: flex;
@@ -64,26 +64,26 @@ body {
         max-width: 1320px;
 
         .sub-container {
-            padding: 200px 0;
+            padding-block: 200px;
 
             h1 {
                 color: white;
                 font-size: 48px;
-    
+
                 .bg-text {
-                    background-image: url('text-bg.jpg');
+                    color: transparent;
+                    background-clip: text;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    background-clip: text;
-                    color: transparent;
+                    background-image: url('images/text-bg.jpg');
                 }
-    
+
                 .bg-text-2 {
-                    background-image: url('text-bg-2.jpg');
+                    color: transparent;
+                    background-clip: text;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    background-clip: text;
-                    color: transparent;
+                    background-image: url('images/text-bg-2.jpg');
                 }
             }
 
@@ -107,22 +107,22 @@ body {
                     border-radius: 20px;
                     transition: all 0.3s ease;
                     background-color: #f59e0b;
-    
+
                     &:hover {
                         background-color: #fbbf24;
                     }
                 }
-    
+
                 .journey-btn {
                     height: 40px;
                     color: white;
                     font-size: 16px;
                     padding: 8px 24px;
                     border-radius: 20px;
-                    border: 1px solid #f59e0b;
                     background-color: black;
                     transition: all 0.3s ease;
-    
+                    border: 1px solid #f59e0b;
+
                     &:hover {
                         border-color: #fbbf24;
                     }
