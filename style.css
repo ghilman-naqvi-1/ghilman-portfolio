@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 body {
-  height: 100vh;
   background-image: url("bg.jpg");
 }
 body nav {
@@ -53,13 +52,18 @@ body nav ul li a:hover {
   color: #fbbf24;
 }
 body .container {
-  margin: 200px 300px 0;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1320px;
 }
-body .container h1 {
+body .container .sub-container {
+  padding: 200px 0;
+}
+body .container .sub-container h1 {
   color: white;
   font-size: 48px;
 }
-body .container h1 .bg-text {
+body .container .sub-container h1 .bg-text {
   background-image: url("text-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +71,7 @@ body .container h1 .bg-text {
           background-clip: text;
   color: transparent;
 }
-body .container h1 .bg-text-2 {
+body .container .sub-container h1 .bg-text-2 {
   background-image: url("text-bg-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,16 +79,16 @@ body .container h1 .bg-text-2 {
           background-clip: text;
   color: transparent;
 }
-body .container p {
+body .container .sub-container p {
   margin-top: 24px;
   color: #8b8686;
   font-size: 18px;
   letter-spacing: 1px;
 }
-body .container .btns {
+body .container .sub-container .btns {
   margin-top: 32px;
 }
-body .container .btns .blog-btn {
+body .container .sub-container .btns .blog-btn {
   height: 40px;
   border: none;
   color: black;
@@ -95,10 +99,10 @@ body .container .btns .blog-btn {
   transition: all 0.3s ease;
   background-color: #f59e0b;
 }
-body .container .btns .blog-btn:hover {
+body .container .sub-container .btns .blog-btn:hover {
   background-color: #fbbf24;
 }
-body .container .btns .journey-btn {
+body .container .sub-container .btns .journey-btn {
   height: 40px;
   color: white;
   font-size: 16px;
@@ -108,11 +112,10 @@ body .container .btns .journey-btn {
   background-color: black;
   transition: all 0.3s ease;
 }
-body .container .btns .journey-btn:hover {
+body .container .sub-container .btns .journey-btn:hover {
   border-color: #fbbf24;
 }
 body .image-container {
-  margin-top: 180px;
   overflow: hidden;
 }
 body .image-container .image-slider {
@@ -168,8 +171,5 @@ body .image-container img {
     color: white;
     font-size: 24px;
     padding: 0;
-  }
-  body .container {
-    margin: 200px 50px 0;
   }
 }/*# sourceMappingURL=style.css.map */
