@@ -81,6 +81,60 @@ body .container p {
   font-size: 18px;
   letter-spacing: 1px;
 }
+body .container .btns {
+  margin-top: 32px;
+}
+body .container .btns .blog-btn {
+  height: 40px;
+  border: none;
+  color: black;
+  font-size: 16px;
+  padding: 8px 24px;
+  margin-right: 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: #f59e0b;
+}
+body .container .btns .blog-btn:hover {
+  background-color: #fbbf24;
+}
+body .container .btns .journey-btn {
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: 1px solid #f59e0b;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+body .container .btns .journey-btn:hover {
+  border-color: #fbbf24;
+}
+body .image-container {
+  margin-top: 180px;
+  overflow: hidden;
+}
+body .image-container .image-slider {
+  display: flex;
+  gap: 16px;
+  animation: slide 60s linear infinite;
+}
+body .image-container img {
+  width: 300px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-70%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 @media (max-width: 920px) {
   body nav {
     justify-content: end;
