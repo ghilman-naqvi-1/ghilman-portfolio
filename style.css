@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url("bg.jpg");
+}
+body nav {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  justify-content: center;
+}
+body nav .name {
+  color: white;
+  font-size: 32px;
+}
+body nav input[type=checkbox] {
+  display: none;
+}
+body nav .menu-btn i {
+  display: none;
+  color: white;
+  font-size: 20px;
+}
+body nav ul {
+  height: 36px;
+  display: flex;
+  padding: 0 12px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #444141;
+  border: 1px solid #9a9494;
+}
+body nav ul li {
+  list-style: none;
+}
+body nav ul li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body nav ul li a:hover {
+  color: #fbbf24;
+}
+body .container {
+  margin: 200px 300px 0;
+}
+body .container h1 {
+  color: white;
+  font-size: 48px;
+}
+body .container h1 .bg-text {
+  background-image: url("text-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+body .container h1 .bg-text-2 {
+  background-image: url("text-bg-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+body .container p {
+  margin-top: 24px;
+  color: #8b8686;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+@media (max-width: 920px) {
+  body nav {
+    justify-content: end;
+    border-radius: 0;
+  }
+  body nav .menu-btn i {
+    display: block;
+  }
+  body nav #click:checked ~ ul {
+    left: 0;
+  }
+  body nav #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  body nav ul {
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 200px;
+    border: none;
+    gap: 24px;
+    position: fixed;
+    border-radius: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: #444141;
+  }
+  body nav ul li a {
+    color: white;
+    font-size: 24px;
+    padding: 0;
+  }
+  body .container {
+    margin: 200px 50px 0;
+  }
+}/*# sourceMappingURL=style.css.map */

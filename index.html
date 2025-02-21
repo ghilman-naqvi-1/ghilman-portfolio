@@ -3,115 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .diagonal-bg {
-            width: 100%;
-            height: 100vh; /* Full screen height */
-            background: linear-gradient(-80deg, black 50%, #f7f3f3 50%);
-        }
-
-        .navbar {
-            display: flex;
-            height: 66px;
-            gap: 32px;
-            width: 100%;
-            align-items: center;
-            justify-content: end;
-            padding-right: 45px;
-        }
-
-        ul {
-            display: flex;
-            gap: 12px;
-        }
-
-        ul li {
-            list-style: none;
-            color: white;
-            padding: 16px;
-        }
-
-        button {
-            padding: 12px;
-            border: none;
-            font-size: 14px;
-            border-radius: 24px;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        .intro {
-            margin-left: 80px;
-            width: 50%;
-        }
-        .container h2 {
-            font-size: 32px;
-            line-height: 32px;
-            margin-bottom: 16px;
-        }
-        .container h1 {
-            margin-bottom: 8px;
-            line-height: 48px;
-            font-size: 48px;
-        }
-
-        .container h6 {
-            color: #4C4E54;
-        }
-
-        .second-container {
-            background-color: #282727;
-            padding: 32px 48px;
-        }
-
-        .second-container h2 {
-            font-size: 32px;
-            line-height: 32px;
-            margin-bottom: 16px;
-            color: white;
-        }
-
-        .second-container p {
-            color: white;
-        }
-    </style>
 </head>
 <body>
-    <div class="diagonal-bg">
-        <div class="navbar">
-            <ul>
-                <li>About me</li>
-                <li>Skills</li>
-                <li>Portfolio</li>
-            </ul>
-            <button>CONTACT ME</button>
-        </div>
-        <div class="container">
-            <div class="intro">
-                <h2>Hi, I am</h2>
-                <h1>Ghilman Naqvi</h1>
-                <h6>Front-end Developer / UI Designer</h6>
-            </div>
-            <div class="img-box"></div>
-        </div>
+    <nav>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Blogs">Blogs</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>
+            <span class="bg-text-2">Hey there, I’m</span>
+            <br>
+            <span class="bg-text">Ghilman Naqvi!</span>
+        </h1>
+        <p>A software engineer & tech enthusiast based in Karachi, Pakistan. <br>
+        Welcome to my digital domain, where I engineer solutions and ignite imaginations.</p>
     </div>
-    <div class="second-container">
-        <h2>IT BERRIES</h2>
-        <p>Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit. Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet varius turpis vel pharetra. Ut ante justo, consequat vitae elementum tempor, accumsan nec eros. </p>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../ghilman-portfolio/script.js"></script>
 </body>
 </html>
