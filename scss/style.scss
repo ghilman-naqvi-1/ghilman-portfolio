@@ -1,3 +1,4 @@
+@import 'mixins';
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +10,9 @@ body {
     background-image: url('images/bg.jpg');
 
     nav {
-        display: flex;
         margin-top: 24px;
-        align-items: center;
         padding: 0 50px 0 50px;
-        justify-content: center;
+        @include flex(flex, $justify: center, $align: center);
 
         .name {
             color: white;
@@ -23,6 +22,7 @@ body {
         input[type="checkbox"] {
             display: none;
         }
+
         .menu-btn i {
             display: none;
             color: white;
@@ -31,12 +31,11 @@ body {
 
         ul {
             height: 36px;
-            display: flex;
             padding: 0 12px;
-            align-items: center;
             border-radius: 20px;
             background-color: #444141;
             border: 1px solid #9a9494;
+            @include flex(flex, $align: center);
 
             li {
                 list-style: none;
@@ -64,7 +63,7 @@ body {
         max-width: 1320px;
 
         .sub-container {
-            padding-block: 200px;
+            padding-block: 190px;
 
             h1 {
                 color: white;
@@ -92,11 +91,12 @@ body {
                 color: #8b8686;
                 font-size: 18px;
                 letter-spacing: 1px;
+                @include truncate;
             }
 
             .btns {
                 margin-top: 32px;
-    
+
                 .blog-btn {
                     height: 40px;
                     border: none;
@@ -135,17 +135,36 @@ body {
         overflow: hidden;
 
         .image-slider {
+            gap: 32px;
             display: flex;
-            gap: 16px;
             animation: slide 60s linear infinite;
+
+            img {
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    transform: rotate(0);
+                    transform: scale(1.1);
+                }
+            }
+
+            :nth-child(even) {
+                transform: rotate(3deg);
+            }
+
+            :nth-child(odd) {
+                transform: rotate(-3deg);
+            }
+
+            &:hover {
+                animation-play-state: paused;
+            }
         }
 
-        img {
-            width: 300px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
     }
 
     @keyframes slide {
@@ -159,8 +178,9 @@ body {
 
     @media (max-width: 920px) {
         nav {
-            justify-content: end;
             border-radius: 0;
+            justify-content: end;
+
             .menu-btn i {
                 display: block;
             }
@@ -175,18 +195,16 @@ body {
 
             ul {
                 top: 60px;
+                gap: 24px;
                 left: -100%;
                 width: 100%;
                 height: 200px;
                 border: none;
-                gap: 24px;
                 position: fixed;
                 border-radius: 0;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
                 transition: all 0.3s ease;
                 background-color: #444141;
+                @include flex(flex, $justify: center, $align: center, $direction: column);
 
                 li {
                     a {

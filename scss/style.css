@@ -6,13 +6,14 @@
 }
 
 body {
+  overflow: hidden;
   background-image: url("images/bg.jpg");
 }
 body nav {
-  display: flex;
   margin-top: 24px;
-  align-items: center;
   padding: 0 50px 0 50px;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 body nav .name {
@@ -29,12 +30,12 @@ body nav .menu-btn i {
 }
 body nav ul {
   height: 36px;
-  display: flex;
   padding: 0 12px;
-  align-items: center;
   border-radius: 20px;
   background-color: #444141;
   border: 1px solid #9a9494;
+  display: flex;
+  align-items: center;
 }
 body nav ul li {
   list-style: none;
@@ -51,13 +52,16 @@ body nav ul li a {
 body nav ul li a:hover {
   color: #fbbf24;
 }
+body nav ul li.active :active {
+  color: #fbbf24;
+}
 body .container {
   margin: 0 auto;
   padding: 0 16px;
   max-width: 1320px;
 }
 body .container .sub-container {
-  padding-block: 200px;
+  padding-block: 190px;
 }
 body .container .sub-container h1 {
   color: white;
@@ -84,6 +88,9 @@ body .container .sub-container p {
   color: #8b8686;
   font-size: 18px;
   letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body .container .sub-container .btns {
   margin-top: 32px;
@@ -115,20 +122,31 @@ body .container .sub-container .btns .journey-btn {
 body .container .sub-container .btns .journey-btn:hover {
   border-color: #fbbf24;
 }
-body .image-container {
-  overflow: hidden;
-}
 body .image-container .image-slider {
+  gap: 32px;
   display: flex;
-  gap: 16px;
   animation: slide 60s linear infinite;
 }
-body .image-container img {
-  width: 300px;
-  height: 250px;
+body .image-container .image-slider img {
+  width: 280px;
+  height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+  transition: all 0.2s ease;
+}
+body .image-container .image-slider img:hover {
+  transform: rotate(0);
+  transform: scale(1.1);
+}
+body .image-container .image-slider :nth-child(even) {
+  transform: rotate(3deg);
+}
+body .image-container .image-slider :nth-child(odd) {
+  transform: rotate(-3deg);
+}
+body .image-container .image-slider:hover {
+  animation-play-state: paused;
 }
 @keyframes slide {
   from {
@@ -140,8 +158,8 @@ body .image-container img {
 }
 @media (max-width: 920px) {
   body nav {
-    justify-content: end;
     border-radius: 0;
+    justify-content: end;
   }
   body nav .menu-btn i {
     display: block;
@@ -154,18 +172,19 @@ body .image-container img {
   }
   body nav ul {
     top: 60px;
+    gap: 24px;
     left: -100%;
     width: 100%;
     height: 200px;
     border: none;
-    gap: 24px;
     position: fixed;
     border-radius: 0;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
     transition: all 0.3s ease;
     background-color: #444141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   body nav ul li a {
     color: white;

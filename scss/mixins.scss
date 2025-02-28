@@ -1,0 +1,14 @@
+// @include truncate
+@mixin truncate() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// @include flex(flex, $direction: column, $justify: center, $align: center)
+@mixin flex($display, $direction: null, $justify: null, $align: null) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
