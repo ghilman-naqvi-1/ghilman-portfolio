@@ -224,7 +224,7 @@ body .about-section .parent .child2 {
     position: fixed;
     border-radius: 0;
     transition: all 0.3s ease;
-    background-color: #444141;
+    background: linear-gradient(to top, #1d3636, #111b1b);
     display: flex;
     align-items: center;
     justify-content: center;
