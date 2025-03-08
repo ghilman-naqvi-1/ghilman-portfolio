@@ -54,7 +54,7 @@ body nav ul li a:hover {
 body .container {
   margin: 0 auto;
   padding: 0 16px;
-  max-width: 1320px;
+  max-width: 1150px;
 }
 body .container .sub-container {
   padding-block: 190px;
@@ -148,11 +148,12 @@ body .about-section {
   margin: 0 auto;
   padding: 0 16px;
   margin-block: 48px;
-  max-width: 1320px;
+  max-width: 1150px;
 }
 body .about-section .parent {
   display: flex;
   gap: 16px;
+  margin-bottom: 16px;
 }
 body .about-section .parent .child1 {
   width: 70%;
@@ -160,12 +161,15 @@ body .about-section .parent .child1 {
   padding: 48px;
   overflow: hidden;
   position: relative;
-  border-radius: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 20px;
   background: linear-gradient(to top, #1d3636, #111b1b);
 }
 body .about-section .parent .child1 h1 {
   font-weight: normal;
-  font-size: 60px;
+  font-size: 51px;
   color: white;
   padding-bottom: 24px;
 }
@@ -189,8 +193,60 @@ body .about-section .parent .child1:hover img {
 body .about-section .parent .child2 {
   width: 30%;
   height: 380px;
-  border-radius: 40px;
+  padding: 48px 48px 0;
+  display: flex;
+  align-items: end;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 40px;
   background: radial-gradient(circle, white -10%, #d1b02c 50%);
+}
+body .about-section .parent .child2 img {
+  height: 240px;
+  width: 100%;
+}
+body .about-section .parent-2 {
+  display: flex;
+  gap: 16px;
+}
+body .about-section .parent-2 .child1 {
+  width: 70%;
+  height: 380px;
+  padding: 48px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(to right, #151313 62%, #201f1f);
+}
+body .about-section .parent-2 .child1 h1 {
+  font-weight: normal;
+  font-size: 51px;
+  color: white;
+  padding-bottom: 24px;
+}
+body .about-section .parent-2 .child1 p {
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  letter-spacing: 1px;
+}
+body .about-section .parent-2 .child2 {
+  width: 30%;
+  height: 380px;
+  padding: 48px 48px 0;
+  display: flex;
+  align-items: end;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 40px;
+  background: radial-gradient(circle, white -10%, #d1b02c 50%);
+}
+body .about-section .parent-2 .child2 img {
+  height: 240px;
+  width: 100%;
 }
 @keyframes slide {
   from {
@@ -235,18 +291,22 @@ body .about-section .parent .child2 {
     font-size: 24px;
     padding: 0;
   }
-  body .about-section .parent {
+  body .about-section .parent,
+  body .about-section .parent-2 {
     flex-direction: column;
   }
-  body .about-section .parent .child1 {
+  body .about-section .parent .child1,
+  body .about-section .parent-2 .child1 {
     height: auto;
     width: 100%;
     padding: 24px;
   }
-  body .about-section .parent .child1 h1 {
+  body .about-section .parent .child1 h1,
+  body .about-section .parent-2 .child1 h1 {
     font-size: 50px;
   }
-  body .about-section .parent .child2 {
+  body .about-section .parent .child2,
+  body .about-section .parent-2 .child2 {
     height: auto;
     width: 100%;
     padding: 24px;
