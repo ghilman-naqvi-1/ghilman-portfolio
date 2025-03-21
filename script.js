@@ -44,13 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: 'power3.out'
     }, '-=0.5');
 
+    // Buttons GSAP animation
     headerTimeline.from('.btns button', {
         y: 20,
         opacity: 0,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: 'power3.out'
+        duration: 0.8,
+        stagger: 0.3,
+        ease: 'power3.out',
+        clearProps: 'all' // Clear properties after animation
     }, '-=0.5');
+    
+    // Add click events for header buttons
+    const blogBtn = document.querySelector('.blog-btn');
+    const journeyBtn = document.querySelector('.journey-btn');
+    
+    if (blogBtn) {
+        blogBtn.addEventListener('click', function() {
+            document.querySelector('#Blogs').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+    
+    if (journeyBtn) {
+        journeyBtn.addEventListener('click', function() {
+            document.querySelector('#About').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 
     // About section animations
     gsap.from('#About .section-title', {

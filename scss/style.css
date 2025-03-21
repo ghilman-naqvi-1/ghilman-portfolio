@@ -101,6 +101,8 @@ body .container .sub-container p {
 }
 body .container .sub-container .btns {
   margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
 }
 body .container .sub-container .btns .blog-btn {
   height: 45px;
@@ -114,6 +116,9 @@ body .container .sub-container .btns .blog-btn {
   transition: all 0.3s ease;
   background-color: #f59e0b;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .container .sub-container .btns .blog-btn i {
   margin-right: 6px;
@@ -134,6 +139,9 @@ body .container .sub-container .btns .journey-btn {
   transition: all 0.3s ease;
   border: 2px solid #f59e0b;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .container .sub-container .btns .journey-btn i {
   margin-right: 6px;
