@@ -138,16 +138,31 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 0.8
     });
 
-    gsap.from('.project-card', {
-        scrollTrigger: {
-            trigger: '.projects-container',
-            start: 'top 80%',
-        },
-        y: 50,
-        opacity: 0,
-        stagger: 0.3,
-        duration: 0.8
-    });
+    // Project cards container
+    const projectsContainer = document.querySelector('.projects-container');
+    if (projectsContainer) {
+        // Set initial state
+        gsap.set('.project-card', {opacity: 0, y: 50});
+        
+        // Create timeline for project cards
+        const projectsTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectsContainer,
+                start: 'top 90%',
+            }
+        });
+        
+        // Add each card to the timeline
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+            projectsTl.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                clearProps: "all", // Clear properties after animation
+                delay: index * 0.2
+            }, index * 0.2); // Offset each animation
+        });
+    }
 
     // Blogs section animations
     gsap.from('#Blogs .section-title', {
@@ -160,16 +175,31 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 0.8
     });
 
-    gsap.from('.blog-card', {
-        scrollTrigger: {
-            trigger: '.blogs-container',
-            start: 'top 80%',
-        },
-        y: 50,
-        opacity: 0,
-        stagger: 0.3,
-        duration: 0.8
-    });
+    // Blog cards container
+    const blogsContainer = document.querySelector('.blogs-container');
+    if (blogsContainer) {
+        // Set initial state
+        gsap.set('.blog-card', {opacity: 0, y: 50});
+        
+        // Create timeline for blog cards
+        const blogsTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: blogsContainer,
+                start: 'top 90%',
+            }
+        });
+        
+        // Add each card to the timeline
+        document.querySelectorAll('.blog-card').forEach((card, index) => {
+            blogsTl.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                clearProps: "all", // Clear properties after animation
+                delay: index * 0.2
+            }, index * 0.2); // Offset each animation
+        });
+    }
 
     // Contact section animations
     gsap.from('#Contact .section-title', {
